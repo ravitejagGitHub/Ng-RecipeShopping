@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ReciepeShopping": {
+    "AngularTechniques": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ReciepeShopping",
+            "outputPath": "dist/AngularTechniques",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -26,7 +26,11 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.slim.js",
+              "node_modules/popper.js/dist/umd/popper.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -51,18 +55,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ReciepeShopping:build"
+            "browserTarget": "AngularTechniques:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ReciepeShopping:build:production"
+              "browserTarget": "AngularTechniques:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ReciepeShopping:build"
+            "browserTarget": "AngularTechniques:build"
           }
         },
         "test": {
@@ -96,7 +100,7 @@
         }
       }
     },
-    "ReciepeShopping-e2e": {
+    "AngularTechniques-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -104,11 +108,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ReciepeShopping:serve"
+            "devServerTarget": "AngularTechniques:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ReciepeShopping:serve:production"
+              "devServerTarget": "AngularTechniques:serve:production"
             }
           }
         },
@@ -124,5 +128,5 @@
       }
     }
   },
-  "defaultProject": "ReciepeShopping"
+  "defaultProject": "AngularTechniques"
 }
