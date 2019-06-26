@@ -1,0 +1,13 @@
+
+.body{
+  background-color: burlywood;
+  height: 90vh;
+  padding: 5px 50px 5px 50px;
+}
+
+@media screen and (max-width: 767px){
+  .body{
+    background-color: blueviolet;
+    padding: 3px 10px 3px 10px;
+  }
+}
